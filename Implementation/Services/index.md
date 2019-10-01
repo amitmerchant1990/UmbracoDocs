@@ -215,7 +215,7 @@ Inside a ContentFinder access to the content cache is already provided via the P
             var someContent = frequest.UmbracoContext.Content.GetById(1234);
 ```
 
-and insde a UrlProvider the GetUrl method has the current UmbracoContext injected:
+And inside a UrlProvider the GetUrl method has the current UmbracoContext injected:
 ```csharp
    public override UrlInfo GetUrl(UmbracoContext umbracoContext, IPublishedContent content, UrlProviderMode mode, string culture, Uri current)
         {
@@ -559,7 +559,7 @@ To access the service directly from the view you would need to use the Service L
         <article>
 ```
 
-or to take this idea a step further create a custom implementation of UmbracoViewPage, called 'CustomViewPage' and create strongly typed gateways to access the shared custom Services:
+Or to take this idea a step further create a custom implementation of UmbracoViewPage, called 'CustomViewPage' and create strongly typed gateways to access the shared custom Services:
 
 ```csharp
 using System.Web;
@@ -619,7 +619,7 @@ namespace Umbraco8.ViewPages
     }
 }
 ```
-with this in place all views inheriting from CustomViewPage or CustomViewPage&lt;T&gt; would have access to the SiteService:
+With this in place all views inheriting from CustomViewPage or CustomViewPage&lt;T&gt; would have access to the SiteService:
 
 ```csharp
 @using Umbraco8.ViewPages
